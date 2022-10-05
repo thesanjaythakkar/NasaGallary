@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "hd-nasa-wallpaper-whatspaper.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "hd-nasa-wallpaper-whatspaper@2x.jpeg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "hd-nasa-wallpaper-whatspaper@3x.jpeg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

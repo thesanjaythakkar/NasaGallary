@@ -10,7 +10,9 @@ target 'NasaGallary' do
 	pod 'MBProgressHUD'
 	pod 'RxSwift'
 	pod 'RxCocoa'
-
+  pod 'RxDataSources'
+  pod 'Hero'
+  pod 'ParallaxHeader'
   target 'NasaGallaryTests' do
     inherit! :search_paths
     pod 'RxTest'

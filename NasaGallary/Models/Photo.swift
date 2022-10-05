@@ -7,11 +7,11 @@
 
 import Foundation
 
+/// Photo Model
 struct Photo:  Codable {
     var copyright: String?
     var title: String
     var explanation: String
     var date: String
     var url: String
-    var dateObj: Date?
 }

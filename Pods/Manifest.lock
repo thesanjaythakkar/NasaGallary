@@ -1,9 +1,16 @@
 PODS:
+  - Differentiator (5.0.0)
+  - Hero (1.6.2)
   - Kingfisher (7.2.4)
   - MBProgressHUD (1.2.0)
+  - ParallaxHeader (3.0.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
@@ -11,29 +18,40 @@ PODS:
     - RxSwift (= 6.5.0)
 
 DEPENDENCIES:
+  - Hero
   - Kingfisher
   - MBProgressHUD
+  - ParallaxHeader
   - RxCocoa
+  - RxDataSources
   - RxSwift
   - RxTest
 
 SPEC REPOS:
   trunk:
+    - Differentiator
+    - Hero
     - Kingfisher
     - MBProgressHUD
+    - ParallaxHeader
     - RxCocoa
+    - RxDataSources
     - RxRelay
     - RxSwift
     - RxTest
 
 SPEC CHECKSUMS:
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  Hero: c69009dbc9e2f0472e081adc644dba05fcedae72
   Kingfisher: 2457be2121734e69e54a2312ecc0150eb9ae70b3
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  ParallaxHeader: a343f55eb38f52a89c5820a77e14cf975b84e6aa
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
 
-PODFILE CHECKSUM: d878cd03cacd5c4471545f1305b5ecae021bc62d
+PODFILE CHECKSUM: 547180e8a262a9655cf4dc6a638c0cdf593be2a1
 
 COCOAPODS: 1.11.3

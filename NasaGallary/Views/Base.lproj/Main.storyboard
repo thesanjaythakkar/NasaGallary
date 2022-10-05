@@ -1,32 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wOd-i5-sUr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--GallaryVC-->
+        <!--Nasa Gallary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="GallaryVC" id="BYZ-38-t0r" customClass="GallaryVC" customModule="NasaGallary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="oOZ-Me-gCy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DGf-1G-4jz">
+                                <rect key="frame" x="0.0" y="98" width="414" height="764"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Z4N-Cl-Z6i">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="70o-Ul-szA">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ect-6m-PNK">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CuG-iH-dWq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nasa Gallary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQa-Zt-yHb" customClass="AppLabel" customModule="NasaGallary" customModuleProvider="target">
+                                        <rect key="frame" x="159" y="57.5" width="96" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="QQa-Zt-yHb" secondAttribute="bottom" constant="20" id="3U9-Bw-SAB"/>
+                                    <constraint firstItem="QQa-Zt-yHb" firstAttribute="centerX" secondItem="CuG-iH-dWq" secondAttribute="centerX" id="4y4-hG-asB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DGf-1G-4jz" firstAttribute="top" secondItem="CuG-iH-dWq" secondAttribute="bottom" id="C8b-zP-xb1"/>
+                            <constraint firstItem="CuG-iH-dWq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GP7-Wm-xlb"/>
+                            <constraint firstItem="DGf-1G-4jz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JWs-Lu-idg"/>
+                            <constraint firstItem="DGf-1G-4jz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QG0-c0-bPZ"/>
+                            <constraint firstItem="CuG-iH-dWq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YzK-LV-6H2"/>
+                            <constraint firstAttribute="bottom" secondItem="oOZ-Me-gCy" secondAttribute="bottom" id="aLU-A2-Zem"/>
+                            <constraint firstItem="CuG-iH-dWq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jDI-oa-bAM"/>
+                            <constraint firstItem="DGf-1G-4jz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mfx-4C-MKQ"/>
+                            <constraint firstItem="oOZ-Me-gCy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pYw-To-QAw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="CuG-iH-dWq" secondAttribute="bottom" constant="-54" id="qGY-pk-HzP"/>
+                            <constraint firstItem="oOZ-Me-gCy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="t7s-wO-kN2"/>
+                            <constraint firstItem="oOZ-Me-gCy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yRv-S4-tfl"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Nasa Gallary" id="k25-Lb-wIM"/>
+                    <connections>
+                        <outlet property="collectionView" destination="DGf-1G-4jz" id="2mT-WG-zih"/>
+                        <segue destination="57v-DZ-EqM" kind="presentation" identifier="DetailsVC" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="ftH-db-7rZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="85"/>
+            <point key="canvasLocation" x="832" y="84"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zkl-PE-5RV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wOd-i5-sUr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ugr-Gc-xgi">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IZg-OS-k5n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VdD-zD-v9z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="84.375"/>
+        </scene>
+        <!--Nasa Gallary-->
+        <scene sceneID="3Do-H1-A6n">
+            <objects>
+                <viewController storyboardIdentifier="DetailsVC" id="57v-DZ-EqM" customClass="DetailsVC" customModule="NasaGallary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dJS-cC-2CE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="vaB-cC-bbX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBc-4A-hUg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.63307998841067392" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwR-5N-JPO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAG-bH-JWm">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="501"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="bLd-iR-fJH">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="HV5-zQ-npp"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="nasaImage"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVc-Aa-cLq" customClass="AppLabel" customModule="NasaGallary" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="414" width="374" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="UIf-Ge-NFl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dgggdfgdgdgdfgdfgdfggdfgdfgdgdlgjdflgdjgdfjkgkldfgjdfgdjgdf kgdfgkdfjgldfgjdgkldf gdflkgdfjgdl gdfgdfjg dklgdfjglkdf gdfkgdfgjd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6n-d9-5aa" customClass="AppLabel" customModule="NasaGallary" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="440" width="374" height="61"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5se-NH-MeR" customClass="AppLabel" customModule="NasaGallary" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="395" width="399" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="sVc-Aa-cLq" firstAttribute="leading" secondItem="y6n-d9-5aa" secondAttribute="leading" id="0c9-Si-aWD"/>
+                                            <constraint firstItem="y6n-d9-5aa" firstAttribute="top" secondItem="sVc-Aa-cLq" secondAttribute="bottom" constant="5" id="1ns-0n-ERy"/>
+                                            <constraint firstItem="5se-NH-MeR" firstAttribute="trailing" secondItem="bLd-iR-fJH" secondAttribute="trailing" constant="-5" id="9h8-0r-qsQ"/>
+                                            <constraint firstItem="y6n-d9-5aa" firstAttribute="leading" secondItem="bLd-iR-fJH" secondAttribute="leading" constant="20" id="AF4-43-d45"/>
+                                            <constraint firstItem="bLd-iR-fJH" firstAttribute="leading" secondItem="hAG-bH-JWm" secondAttribute="leading" id="Cnq-15-w9j"/>
+                                            <constraint firstItem="5se-NH-MeR" firstAttribute="bottom" secondItem="bLd-iR-fJH" secondAttribute="bottom" constant="-5" id="Wop-hY-F7k"/>
+                                            <constraint firstItem="sVc-Aa-cLq" firstAttribute="top" secondItem="bLd-iR-fJH" secondAttribute="bottom" constant="14" id="ZEV-At-jLx"/>
+                                            <constraint firstItem="bLd-iR-fJH" firstAttribute="top" secondItem="hAG-bH-JWm" secondAttribute="top" id="d5l-Ra-kfD"/>
+                                            <constraint firstItem="y6n-d9-5aa" firstAttribute="trailing" secondItem="bLd-iR-fJH" secondAttribute="trailing" constant="-20" id="fFt-hP-2M4"/>
+                                            <constraint firstItem="5se-NH-MeR" firstAttribute="leading" secondItem="hAG-bH-JWm" secondAttribute="leading" constant="10" id="ihU-Zb-RGe"/>
+                                            <constraint firstItem="sVc-Aa-cLq" firstAttribute="trailing" secondItem="y6n-d9-5aa" secondAttribute="trailing" id="nZn-zq-lVO"/>
+                                            <constraint firstAttribute="trailing" secondItem="bLd-iR-fJH" secondAttribute="trailing" id="org-Lg-I5F"/>
+                                            <constraint firstAttribute="bottom" secondItem="y6n-d9-5aa" secondAttribute="bottom" id="xDN-4M-3mA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hAG-bH-JWm" secondAttribute="bottom" id="4O5-e2-Itr"/>
+                                    <constraint firstItem="hAG-bH-JWm" firstAttribute="top" secondItem="PwR-5N-JPO" secondAttribute="top" id="Vbc-wg-02S"/>
+                                    <constraint firstItem="hAG-bH-JWm" firstAttribute="leading" secondItem="PwR-5N-JPO" secondAttribute="leading" id="jOb-bc-mcX"/>
+                                    <constraint firstAttribute="trailing" secondItem="hAG-bH-JWm" secondAttribute="trailing" id="rtc-Na-1mY"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rqv-mH-Zs5">
+                                <rect key="frame" x="10" y="54" width="37" height="31"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePadding="10">
+                                    <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tapOnBack:" destination="57v-DZ-EqM" eventType="touchUpInside" id="Keq-cE-d5X"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Myth" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hpd-er-qj0" customClass="AppLabel" customModule="NasaGallary" customModuleProvider="target">
+                                <rect key="frame" x="45" y="59.5" width="324" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y0B-28-lwX"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hAG-bH-JWm" firstAttribute="width" secondItem="dJS-cC-2CE" secondAttribute="width" id="5Em-i2-1dw"/>
+                            <constraint firstItem="PwR-5N-JPO" firstAttribute="trailing" secondItem="mBc-4A-hUg" secondAttribute="trailing" id="8Uq-kI-mU5"/>
+                            <constraint firstItem="PwR-5N-JPO" firstAttribute="leading" secondItem="mBc-4A-hUg" secondAttribute="leading" id="Ajq-yC-Nzu"/>
+                            <constraint firstAttribute="bottom" secondItem="vaB-cC-bbX" secondAttribute="bottom" id="DTn-cu-0as"/>
+                            <constraint firstItem="y0B-28-lwX" firstAttribute="trailing" secondItem="hpd-er-qj0" secondAttribute="trailing" constant="45" id="Dsk-OS-Njt"/>
+                            <constraint firstItem="mBc-4A-hUg" firstAttribute="leading" secondItem="vaB-cC-bbX" secondAttribute="leading" id="HsO-jl-ikP"/>
+                            <constraint firstItem="hpd-er-qj0" firstAttribute="leading" secondItem="y0B-28-lwX" secondAttribute="leading" constant="45" id="Jb8-y2-yNL"/>
+                            <constraint firstItem="vaB-cC-bbX" firstAttribute="trailing" secondItem="y0B-28-lwX" secondAttribute="trailing" id="Udm-K5-d7p"/>
+                            <constraint firstItem="mBc-4A-hUg" firstAttribute="trailing" secondItem="vaB-cC-bbX" secondAttribute="trailing" id="ahT-YY-oX0"/>
+                            <constraint firstItem="mBc-4A-hUg" firstAttribute="top" secondItem="vaB-cC-bbX" secondAttribute="top" id="coq-Gr-asA"/>
+                            <constraint firstItem="hpd-er-qj0" firstAttribute="centerY" secondItem="Rqv-mH-Zs5" secondAttribute="centerY" id="eJx-2h-noG"/>
+                            <constraint firstItem="Rqv-mH-Zs5" firstAttribute="top" secondItem="y0B-28-lwX" secondAttribute="top" constant="10" id="eeZ-2H-dDk"/>
+                            <constraint firstItem="vaB-cC-bbX" firstAttribute="leading" secondItem="y0B-28-lwX" secondAttribute="leading" id="j2E-kc-YUA"/>
+                            <constraint firstItem="Rqv-mH-Zs5" firstAttribute="leading" secondItem="y0B-28-lwX" secondAttribute="leading" constant="10" id="leh-6b-6dC"/>
+                            <constraint firstItem="vaB-cC-bbX" firstAttribute="top" secondItem="dJS-cC-2CE" secondAttribute="top" id="mox-fi-FQ4"/>
+                            <constraint firstItem="PwR-5N-JPO" firstAttribute="top" secondItem="mBc-4A-hUg" secondAttribute="top" id="rHh-XE-5Wa"/>
+                            <constraint firstItem="PwR-5N-JPO" firstAttribute="bottom" secondItem="mBc-4A-hUg" secondAttribute="bottom" id="rfA-tG-Vqw"/>
+                            <constraint firstItem="mBc-4A-hUg" firstAttribute="bottom" secondItem="vaB-cC-bbX" secondAttribute="bottom" id="rtg-8D-WaV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nasa Gallary" id="cou-Jf-ZEJ"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="constImgHeight" destination="HV5-zQ-npp" id="RMD-ty-ZnC"/>
+                        <outlet property="copyRightLabel" destination="5se-NH-MeR" id="F3h-CD-MuP"/>
+                        <outlet property="dateLabel" destination="sVc-Aa-cLq" id="6vU-Ki-8xG"/>
+                        <outlet property="descLabel" destination="y6n-d9-5aa" id="1Lt-2o-Fa2"/>
+                        <outlet property="imgView" destination="bLd-iR-fJH" id="sHP-0p-TpG"/>
+                        <outlet property="scrollView" destination="PwR-5N-JPO" id="SKp-Xu-2zd"/>
+                        <outlet property="titleLabel" destination="hpd-er-qj0" id="Yg4-rU-UW7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUO-3z-hrA" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1685.5072463768117" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="5se-NH-MeR"/>
+        <designable name="QQa-Zt-yHb">
+            <size key="intrinsicContentSize" width="96" height="20.5"/>
+        </designable>
+        <designable name="hpd-er-qj0">
+            <size key="intrinsicContentSize" width="82" height="20.5"/>
+        </designable>
+    </designables>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="bg" width="853" height="566.5"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="placeholder" width="170.5" height="141.5"/>
     </resources>
 </document>
